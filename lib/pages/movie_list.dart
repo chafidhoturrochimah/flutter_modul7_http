@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modul7_http/pages/movie_detail.dart';
 import 'package:flutter_modul7_http/service/http_service.dart';
 
 class MovieList extends StatefulWidget {
@@ -51,9 +52,17 @@ class _MovieListState extends State<MovieList> {
             elevation: 2.0,
             child: ListTile(
               title: Text(movies[position].title),
+              //menambahkan gambar dari response api ke listview
+              leading: Image.network('https://image.tmdb.org/t/p/w500/' +  movies[position].posterPath),
               subtitle: Text(
                 'Rating = ' + movies[position].voteAverage.toString(),
               ),
+              //Untuk membuat perpindahan dari movie list ke movie detail buatlah onTap event
+              onTap: (){
+                MaterialPageRoute route = MaterialPageRoute(
+                  builder: (_) => MovieDetail(movies[position]));
+                Navigator.push(context, route);
+              },
             ),
           );
         },
