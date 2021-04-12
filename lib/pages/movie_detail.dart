@@ -20,8 +20,28 @@ class MovieDetail extends StatelessWidget {
     double height = MediaQuery.of(context).size.height;
 
     return Scaffold(
+      backgroundColor: Colors.pink[50],
       appBar: AppBar(
-        title: Text(movie.title),
+        title: Text(
+          movie.title,
+          style: TextStyle(
+            fontFamily: 'Nunito',
+            fontWeight: FontWeight.bold
+          ),
+        ),
+        elevation: 5.0,
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.bottomRight,
+              end: Alignment.topLeft,
+              colors: <Color>[
+                Colors.pink[200],
+                Colors.blue
+              ]
+            )          
+          ),
+        ),
       ),
 
       body: SingleChildScrollView(
@@ -34,7 +54,13 @@ class MovieDetail extends StatelessWidget {
                 child: Image.network(path),
               ),
               Container(
-                child: Text(movie.overview),
+                child: Text(
+                  movie.overview,
+                  textAlign: TextAlign.justify,
+                  style: TextStyle(
+                    fontFamily: 'Nunito'
+                  ),
+                ),
                 padding: EdgeInsets.only(
                   left: 16, 
                   right: 16
