@@ -6,7 +6,7 @@
   <li><b>NIM     : 1931710013</b></li>  
 </ul><br><br>
 
-<b>Langkah-langkah http</b><hr><br>
+<b>Langkah-langkah http</b><hr>
 <ul>
   <li>1. Mempersiapkan Project</li>
   <li>2. Mendapatkan API KEY dari themoviedb.org dengan mengikuti tutorial dari https://www.dicoding.com/blog/registrasi-testing-themoviedb-api/ dan juga https://stackoverflow.com/questions/31047815/api-key-for-themoviedb-org</li>
