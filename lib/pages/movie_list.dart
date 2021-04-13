@@ -82,17 +82,61 @@ class _MovieListState extends State<MovieList> {
               ),
               //menambahkan gambar dari response api ke listview
               leading: Image.network('https://image.tmdb.org/t/p/w500/' +  movies[position].posterPath),
-              subtitle: Text(
-                'Rating = ' + movies[position].voteAverage.toString(),
-                style: TextStyle(
-                  fontWeight: FontWeight.normal,
-                  fontFamily: 'Nunito'
-                ),
+              subtitle: 
+              Column(
+                children: [
+                  Row(
+                    children: <Widget> [
+                      Icon(
+                        Icons.star_rate,
+                        size: 12,
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Text(
+                        movies[position].voteAverage.toString(),
+                        style: TextStyle(
+                          fontWeight: FontWeight.normal,
+                          fontFamily: 'Nunito',
+                          fontSize: 12.0
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 2,
+                  ),
+                  Row(
+                    children: <Widget> [
+                      Icon(
+                        Icons.calendar_today,
+                        size: 12,
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Text(
+                        movies[position].releaseDate,
+                        style: TextStyle(
+                          fontWeight: FontWeight.normal,
+                          fontFamily: 'Nunito',
+                          fontSize: 12.0
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                ],
               ),
+              
               trailing: GestureDetector(
                 child: Icon(
                   Icons.arrow_right_rounded,
                   color: Colors.red[200],
+                  size: 35,
                 ),
                 //Untuk membuat perpindahan dari movie list ke movie detail buatlah onTap event
                 onTap: (){

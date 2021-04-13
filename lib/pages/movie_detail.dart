@@ -23,12 +23,13 @@ class MovieDetail extends StatelessWidget {
       backgroundColor: Colors.pink[50],
       appBar: AppBar(
         title: Text(
-          movie.title,
+          'Overview',
           style: TextStyle(
             fontFamily: 'Nunito',
             fontWeight: FontWeight.bold
           ),
         ),
+        centerTitle: true,
         elevation: 5.0,
         flexibleSpace: Container(
           decoration: BoxDecoration(
@@ -55,8 +56,46 @@ class MovieDetail extends StatelessWidget {
               ),
               Container(
                 child: Text(
+                  movie.title,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontFamily: 'Nunito',
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20.0
+                  ),
+                ),
+                padding: EdgeInsets.only(
+                  left: 16, 
+                  right: 16
+                ),
+              ),
+              Container(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Rate = ' + movie.voteAverage.toString(),
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontFamily: 'Nunito',
+                        fontWeight: FontWeight.bold,
+                        fontSize: 12.0
+                      ),
+                    ),
+                  ],
+                ),
+                padding: EdgeInsets.only(
+                  left: 16, 
+                  right: 16
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Container(
+                child: Text(
                   movie.overview,
-                  textAlign: TextAlign.justify,
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                     fontFamily: 'Nunito'
                   ),
@@ -65,6 +104,52 @@ class MovieDetail extends StatelessWidget {
                   left: 16, 
                   right: 16
                 ),
+              ),
+              
+              SizedBox(
+                height: 20,
+              ),
+              Container(
+                alignment: Alignment.bottomCenter,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(50.0),
+                  gradient: LinearGradient(
+                    // Where the linear gradient begins and ends
+                    begin: Alignment.topRight,
+                    end: Alignment.bottomLeft,
+                    // Add one stop for each color. Stops should increase from 0 to 1
+                    //stops: [0.1, 0.9],
+                    colors: <Color>[
+                      Colors.pink[200],
+                      Colors.blue
+                    ]
+                  ),
+                ),
+                child: SizedBox(
+                  width: double.infinity,
+                  // ignore: deprecated_member_use
+                  child: RaisedButton(
+                    child: Text(
+                      "Watch Trailer",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'Nunito',
+                        fontSize: 14,
+                      ),
+                    ),
+                    textColor: Colors.white,
+                    color: Colors.transparent,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(60.0)
+                    ),
+                    onPressed: ()  {
+                      
+                    },
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 10,
               ),
             ],
           ),
