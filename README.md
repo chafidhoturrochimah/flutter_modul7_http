@@ -22,5 +22,7 @@
  4. Pada gambar dibawah ini, sudah berhasil membuat halaman detail popular movie. Yang dimana ketika di tap salah satu list view popular movie, maka akan menuju ke halaman detail movie yang dipilih. Saya tap film Godzilla vs. Kong. dan akan muncul seperti gambar di bawah ini.<br>
   ![WhatsApp Image 2021-04-13 at 09 47 52 (3)](https://user-images.githubusercontent.com/52942668/114493428-c1ea5080-9c44-11eb-8e15-6ae719555eda.jpeg)
 
-5. Challenge : Modifikasilah Tampilan agar terlihat lebih menarik! <br>
-   Berikut hasilnya : <br>
+5. Challenge : Modifikasilah Tampilan agar terlihat lebih menarik! <hr>
+   <justify><b>Disini saya memeodifikasi pada bagian font, warna, perataan teks, dan juga menambhakan beberapa icon seperti kalender, bintang, tanda panah kanan. serta saya juga memodifikasi tampilan pada halaman detail. dengan menambahkan title, rating dan juga button watch trailer. namun, button tersebut belum bisa berfungsi. dikarenakan saya belum bisa menambahkan video.</b></justify><br>
+   Berikut hasil Video Demo Challenge diatas : <br>
+   https://drive.google.com/file/d/1vZknZnR4T8WQc5C-kvL1VV12ND2cHW8V/view?usp=sharing
